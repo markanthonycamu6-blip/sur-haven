@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  color: #333;
+  background: #fff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 60px;
+  background: rgba(10, 61, 98, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* LOGO (Sur Haven) */
+.logo {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* NAV LINKS */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  height: 100vh;
+  background: url("caramoan.jpg")
+              center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+/* HERO OVERLAY */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 70px 90px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+/* HERO TEXT */
+.hero-overlay h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-primary {
+  padding: 14px 36px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1ecbe1;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background: #17b3c7;
+  transform: translateY(-2px);
+}
+
+/* ================= IMAGE STRIP ================= */
+.image-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.image-strip img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 90px 60px;
+  text-align: center;
+}
+
+.section.alt {
+  background: #f2fbfd;
+}
+
+/* ================= CARDS ================= */
+.cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card,
+.tour-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.card img,
+.tour-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card:hover img,
+.tour-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+/* ================= FULL IMAGE SECTION ================= */
+.full-image {
+  height: 70vh;
+  background: url("siruma.jpg")
+              center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-text {
+  background: rgba(0,0,0,0.5);
+  padding: 50px 70px;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+/* ================= TESTIMONIAL ================= */
+.testimonial {
+  max-width: 650px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* ================= NEWSLETTER / CONTACT ================= */
+.newsletter {
+  padding: 80px;
+  background: #004e7c;
+  color: #ffffff;
+  text-align: center;
+}
+
+.newsletter input {
+  padding: 12px;
+  width: 260px;
+  margin: 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 30px;
+  background: #012a43;
+  color: #ffffff;
+  text-align: center;
+}
+
+.socials a {
+  margin: 0 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .hero-overlay {
+    padding: 40px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .image-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
